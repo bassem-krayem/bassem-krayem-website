@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bassem Krayem | Backend Software Engineer</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav aria-label="Global Navigation">
+            <ul>
+                <li>
+                    <a href="/" <%- path==='home' ? 'aria-current="page"' : '' %>>Home</a>
+                </li>
+                <li>
+                    <a href="/about" <%- path==='about' ? 'aria-current="page"' : '' %>>About</a>
+                </li>
+                <li>
+                    <a href="/portfolio" <%- path==='portfolio' ? 'aria-current="page"' : '' %>>Portfolio</a>
+                </li>
+                <li>
+                    <a href="/contact" <%- path==='contact' ? 'aria-current="page"' : '' %>>Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>

@@ -1,0 +1,34 @@
+<hr>
+<footer>
+    <section class="footer-content" aria-label="Contact and Social Links">
+        <div class="social-links">
+            <a href="https://github.com/bassem-krayem" target="_blank" rel="noopener">GitHub</a> |
+            <a href="https://linkedin.com/in/bassem-krayem" target="_blank" rel="noopener">LinkedIn</a> |
+            <a href="https://t.me/bassem_krayem" target="_blank" rel="noopener">Telegram</a> |
+            <a href="https://www.goodreads.com/bassem_krayem" target="_blank" rel="noopener">Goodreads</a> |
+            <a href="https://www.wattpad.com/user/BassemKrayem" target="_blank" rel="noopener">Wattpad</a>
+        </div>
+
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li>
+                    <a href="/" <%- path==='home' ? 'aria-current="page"' : '' %>>Home</a>
+                </li>
+                <li>
+                    <a href="/about" <%- path==='about' ? 'aria-current="page"' : '' %>>About</a>
+                </li>
+                <li>
+                    <a href="/portfolio" <%- path==='portfolio' ? 'aria-current="page"' : '' %>>Portfolio</a>
+                </li>
+                <li>
+                    <a href="/contact" <%- path==='contact' ? 'aria-current="page"' : '' %>>Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <% const currentYear=new Date().getFullYear(); %>
+            <p>&copy; <%= currentYear %> Bassem Krayem. Built with Node.js & Passion.</p>
+    </section>
+</footer>
+</body>
+
+</html>
