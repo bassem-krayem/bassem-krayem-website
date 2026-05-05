@@ -39,6 +39,26 @@ app.get("/contact", (req, res) => {
   });
 });
 
+app.get("/resume", (req, res) => {
+  const filePath = path.join(
+    __dirname,
+    "public",
+    "docs",
+    "Bassem Krayem - Backend Engineer 2026.pdf",
+  );
+  const fileName = "Bassem Krayem - Backend Engineer 2026.pdf";
+
+  // Tell the browser to display inline (view in browser)
+  // and suggest the custom filename for downloads
+  res.setHeader(
+    "Content-Disposition",
+    `inline; filename*=UTF-8''${encodeURIComponent(fileName)}`,
+  );
+  res.contentType("application/pdf");
+
+  res.sendFile(filePath);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
