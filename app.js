@@ -12,19 +12,31 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.render("home", { path: "home" });
+  res.render("home", {
+    path: "home",
+    title: "Bassem Krayem Backend Software Engineer Home Page",
+  });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { path: "about" });
+  res.render("about", {
+    path: "about",
+    title: "Bassem Krayem Backend Software Engineer About Page",
+  });
 });
 
 app.get("/portfolio", (req, res) => {
-  res.render("portfolio", { path: "portfolio" });
+  res.render("portfolio", {
+    path: "portfolio",
+    title: "Bassem Krayem Backend Software Engineer Portfolio Page",
+  });
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact", { path: "contact" });
+  res.render("contact", {
+    path: "contact",
+    title: "Bassem Krayem Backend Software Engineer Contact Page",
+  });
 });
 
 app.listen(PORT, () => {

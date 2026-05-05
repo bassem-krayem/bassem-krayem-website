@@ -1,0 +1,172 @@
+:root {
+  --bg: #ffffff;
+  --text: #0b0b0b;
+  --muted: #4b5563;
+  --accent: #0047ab; /* high-contrast blue */
+  --accent-contrast: #ffffff;
+  --focus-width: 3px;
+  --radius: 6px;
+  --max-width: 980px;
+  --base-font-size: 18px;
+}
+
+/* Reset-ish accessible defaults */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: var(--base-font-size);
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  display: block;
+  padding: 1.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Headings: clear hierarchy and spacing */
+h1 {
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius);
+}
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+/* Make interactive targets comfortably large for keyboard and touch */
+a,
+button,
+input,
+select,
+textarea {
+  min-height: 2.1rem;
+}
+
+/* Skip link: visible when focused */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus,
+.skip-link:active {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  z-index: 9999;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Strong focus-visible styles for keyboard users */
+:focus-visible {
+  outline: var(--focus-width) solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Utilities for users who want higher contrast or larger text */
+.high-contrast {
+  background: #000;
+  color: #fff;
+}
+.high-contrast a {
+  color: #ffea00;
+}
+.large-text {
+  font-size: 20px;
+}
+
+/* Footer and content spacing */
+footer {
+  padding: 1rem;
+  border-top: 1px solid #e6e6e6;
+  background: #fafafa;
+}
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.social-links a {
+  margin-right: 0.35rem;
+}
+
+/* Ensure links are announced and visible */
+a {
+  color: var(--accent);
+}
+a:focus {
+  text-decoration: underline;
+}
+
+/* Make lists readable */
+ul {
+  margin-left: 1.25rem;
+}
+
+/* Improve contrast of code/emphasis */
+strong,
+b {
+  color: #000;
+}
+
+/* Small-screen adjustments */
+@media (max-width: 520px) {
+  nav ul {
+    gap: 0.25rem;
+  }
+  main {
+    padding: 0.75rem;
+  }
+}
