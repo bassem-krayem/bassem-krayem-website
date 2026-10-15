@@ -1,8 +1,10 @@
 <%- include('partials/header') %>
 
   <main id="main-content">
-    <section class="hero">
-      <h1>Welcome to My Space</h1>
+    <section class="hero" aria-labelledby="hero-name">
+      <h1 id="hero-name">Bassem Krayem</h1>
+      <p class="hero-title">Junior Backend Software Engineer</p>
+
       <p>
         Best greetings, dear visitor! Thank you for stepping into my website. I am
         <strong>Bassem Krayem</strong>, a totally blind Backend Software Engineer
@@ -11,26 +13,71 @@
 
       <p>
         I am a graduate of
-        <a href="https://holbertonschool.com" target="_blank" rel="noopener">Holberton School</a>, where I specialized
+        <a href="https://holbertonschool.com" target="_blank" rel="noopener noreferrer">Holberton School<span class="sr-only"> (opens in a new tab)</span></a>, where I specialized
         in Fullstack Web Development and completed the
-        Software Engineering Program in <strong>June 2026</strong>. As I am
-        writing these lines, I am currently searching for a Software
-        Engineering internship and open to any opportunity where I can keep
-        learning and contribute from day one.
+        Software Engineering Program in <strong>June 2026</strong>. I build REST APIs
+        in Node.js with JavaScript and TypeScript, write tools in Python, and work
+        with PostgreSQL and MongoDB on Linux/Ubuntu every day.
       </p>
 
-      <p>
-        For a deeper look into my journey and technical background, please visit
-        my
-        <a href="/about">About Me page</a>.
+      <p class="status">
+        <strong>Status:</strong> open to junior backend roles and software
+        engineering internships, in Tunisia, remote, or with relocation to the
+        Gulf or Europe.
       </p>
+
+      <ul class="cta-list" aria-label="Quick links">
+        <li><a href="/resume" class="btn">View my Resume (PDF)</a></li>
+        <li><a href="https://github.com/bassem-krayem" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li><a href="/contact" class="btn btn-secondary">Contact me</a></li>
+      </ul>
     </section>
 
-    <section class="resume-section">
-      <h2>Resume</h2>
-      <p>You can view and download my professional resume here:</p>
-      <a href="/resume" class="btn">Download Resume (PDF)</a>
+    <section aria-labelledby="highlights">
+      <h2 id="highlights">Highlights</h2>
+      <ul class="highlight-list">
+        <li>
+          <strong>Open source, merged:</strong> I fixed an accessibility bug in
+          freeCodeCamp's Python terminal, where screen readers received only the
+          last line of output
+          (<a href="https://github.com/freeCodeCamp/freeCodeCamp/pull/70413" target="_blank" rel="noopener noreferrer">PR #70413<span class="sr-only"> (opens in a new tab)</span></a>),
+          and a typo in Cloudflare's R2 documentation
+          (<a href="https://github.com/cloudflare/cloudflare-docs/pull/33703" target="_blank" rel="noopener noreferrer">PR #33703<span class="sr-only"> (opens in a new tab)</span></a>).
+        </li>
+        <li>
+          <strong>Motamayezoon Library API:</strong> 33 endpoints across 5 resources,
+          JWT authentication with three roles, and 147 automated tests
+          (Mocha/Chai and Supertest).
+        </li>
+        <li>
+          <strong>How I work:</strong> I build with Claude Code and GitHub Copilot,
+          and I verify what ships with tests.
+        </li>
+      </ul>
+      <p>
+        See all my work on the <a href="/portfolio">Portfolio page</a>, or read my
+        full story on the <a href="/about">About Me page</a>.
+      </p>
     </section>
   </main>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bassem Krayem",
+    "jobTitle": "Junior Backend Software Engineer",
+    "url": "https://bassem-krayem.dev",
+    "email": "mailto:bassem.krayem09@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tunis", "addressCountry": "TN" },
+    "alumniOf": { "@type": "EducationalOrganization", "name": "Holberton School" },
+    "knowsAbout": ["Node.js", "Express", "JavaScript", "TypeScript", "Python", "PostgreSQL", "MongoDB", "REST APIs", "Accessibility"],
+    "sameAs": [
+      "https://github.com/bassem-krayem",
+      "https://linkedin.com/in/bassem-krayem",
+      "https://t.me/bassem_krayem"
+    ]
+  }
+  </script>
 
   <%- include('partials/footer') %>

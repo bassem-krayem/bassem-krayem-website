@@ -1,7 +1,7 @@
 {
   "name": "bassem-krayem-website",
   "version": "1.0.0",
-  "description": "where you will find my pages for my website",
+  "description": "Personal website of Bassem Krayem, junior backend software engineer",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -17,5 +17,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

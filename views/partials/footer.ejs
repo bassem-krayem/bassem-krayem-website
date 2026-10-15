@@ -1,13 +1,13 @@
 <hr>
 <footer>
     <section class="footer-content" aria-label="Contact and Social Links">
-        <div class="social-links">
-            <a href="https://github.com/bassem-krayem" target="_blank" rel="noopener">GitHub</a> |
-            <a href="https://linkedin.com/in/bassem-krayem" target="_blank" rel="noopener">LinkedIn</a> |
-            <a href="https://t.me/bassem_krayem" target="_blank" rel="noopener">Telegram</a> |
-            <a href="https://www.goodreads.com/bassem_krayem" target="_blank" rel="noopener">Goodreads</a> |
-            <a href="https://www.wattpad.com/user/bassem-krayem" target="_blank" rel="noopener">Wattpad</a>
-        </div>
+        <ul class="social-links" aria-label="Social links">
+            <li><a href="https://github.com/bassem-krayem" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://linkedin.com/in/bassem-krayem" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://t.me/bassem_krayem" target="_blank" rel="noopener noreferrer">Telegram<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.goodreads.com/bassem_krayem" target="_blank" rel="noopener noreferrer">Goodreads<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.wattpad.com/user/bassem-krayem" target="_blank" rel="noopener noreferrer">Wattpad<span class="sr-only"> (opens in a new tab)</span></a></li>
+        </ul>
 
         <nav aria-label="Footer Navigation">
             <ul>
@@ -21,7 +21,7 @@
                     <a href="/portfolio" <%- path==='portfolio' ? 'aria-current="page"' : '' %>>Portfolio</a>
                 </li>
                 <li>
-                    <a href="/resume" <%- path==='resume' ? 'aria-current="page"' : '' %>>Resume</a>
+                    <a href="/resume">Resume</a>
                 </li>
                 <li>
                     <a href="/contact" <%- path==='contact' ? 'aria-current="page"' : '' %>>Contact</a>
@@ -29,7 +29,7 @@
             </ul>
         </nav>
         <% const currentYear=new Date().getFullYear(); %>
-            <p>&copy; <%= currentYear %> Bassem Krayem. Built with Node.js & Passion.</p>
+            <p>&copy; <%= currentYear %> Bassem Krayem. Built with Node.js &amp; Passion.</p>
     </section>
 </footer>
 </body>

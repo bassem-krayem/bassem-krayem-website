@@ -5,6 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="author" content="Bassem Krayem">
+    <link rel="canonical" href="<%= canonical %>">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <!-- Link previews (LinkedIn, WhatsApp, Telegram, X) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bassem Krayem">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:url" content="<%= canonical %>">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="<%= title %>">
+    <meta name="twitter:description" content="<%= description %>">
+
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -23,7 +38,7 @@
                     <a href="/portfolio" <%- path==='portfolio' ? 'aria-current="page"' : '' %>>Portfolio</a>
                 </li>
                 <li>
-                    <a href="/resume" <%- path==='resume' ? 'aria-current="page"' : '' %>>Resume</a>
+                    <a href="/resume">Resume</a>
                 </li>
                 <li>
                     <a href="/contact" <%- path==='contact' ? 'aria-current="page"' : '' %>>Contact</a>

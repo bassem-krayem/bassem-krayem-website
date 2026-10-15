@@ -4,50 +4,19 @@
   <article>
     <h1>My Projects</h1>
     <p>
-      Here is a showcase of the applications and platforms I have built. They
-      reflect my passion for backend architecture, accessibility (A11y), and
-      social impact.
+      Here is a showcase of the applications I have built and the open-source
+      contributions I have made. They reflect my passion for backend
+      architecture, accessibility (A11y), and social impact.
     </p>
-
-    <section class="project-card" aria-labelledby="project-geosound">
-      <h2 id="project-geosound">Geosound</h2>
-      <p>
-        <strong>Technologies:</strong> Node.js, Express, MongoDB, Mongoose,
-        RESTful APIs.
-      </p>
-      <p>
-        A platform where blind pupils can study geography in an accessible and
-        engaging way. I built this platform with the help of Copilot to test the
-        vibe of coding—whether it can really produce something production-ready.
-        It was created for a student as part of her graduation project in the
-        field of education.
-      </p>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/bassem-krayem/geosound"
-            target="_blank"
-            rel="noopener"
-          >
-            Source Code on GitHub
-          </a>
-        </li>
-        <li>
-          <a href="http://geosound.ddns.net" target="_blank" rel="noopener">
-            View Deployed Version (Note: Live status depends on project usage)
-          </a>
-        </li>
-      </ul>
-    </section>
 
     <section class="project-card" aria-labelledby="project-motamayezoon">
       <h2 id="project-motamayezoon">Motamayezoon Library API</h2>
       <p>
-        <strong>Technologies:</strong> Node.js, Express, MongoDB, Mongoose,
-        RESTful APIs.
+        <strong class="tech-label">Technologies:</strong> Node.js, Express, MongoDB, Mongoose, Joi,
+        JWT, Mocha/Chai, Supertest, Swagger/OpenAPI, Cloudflare R2.
       </p>
       <p>
-        A robust backend API designed to support the Motamayezoon team in their
+        A backend API designed to support the Motamayezoon team in their
         mission to convert accessible reading materials for blind and visually
         impaired users. The API manages book uploads, categorizes resources, and
         links them with book series. It supports three formats:
@@ -55,13 +24,67 @@
         clean, well-formatted materials tailored for screen readers.
       </p>
       <ul>
+        <li><b>33 REST endpoints</b> across 5 resources, with Joi validation on incoming requests.</li>
+        <li><b>147 automated tests</b> (Mocha/Chai and Supertest) covering authentication, CRUD operations, permissions, and input validation.</li>
+        <li>JWT authentication with role-based access control (user, uploader, admin), and protection against NoSQL injection, XSS, and parameter pollution.</li>
+        <li>S3-compatible file storage, first DigitalOcean Spaces and then Cloudflare R2, and API documentation with Swagger/OpenAPI.</li>
+      </ul>
+      <ul class="link-list">
         <li>
           <a
             href="https://github.com/bassem-krayem/motamyezon_for_text_books_v2"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-            Source Code on GitHub
+            Source Code on GitHub<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="project-card" aria-labelledby="open-source">
+      <h2 id="open-source">Open Source Contributions</h2>
+      <p>
+        <strong class="tech-label">Both merged upstream:</strong>
+      </p>
+      <ul>
+        <li>
+          <b>freeCodeCamp:</b> I found an accessibility bug in the Python
+          terminal: screen readers received only the last line of output,
+          because each print replaced the previous text. I fixed it so every
+          printed line is added as its own paragraph (TypeScript/React), and
+          tested it with my screen reader. Merged in October 2026.
+          <a href="https://github.com/freeCodeCamp/freeCodeCamp/pull/70413" target="_blank" rel="noopener noreferrer">View pull request #70413<span class="sr-only"> (opens in a new tab)</span></a>
+        </li>
+        <li>
+          <b>Cloudflare Docs:</b> while reading the R2 documentation to move
+          Motamayezoon's file storage to Cloudflare R2, I found and fixed a typo
+          in the public buckets guide. My first open-source contribution, merged
+          in September 2026.
+          <a href="https://github.com/cloudflare/cloudflare-docs/pull/33703" target="_blank" rel="noopener noreferrer">View pull request #33703<span class="sr-only"> (opens in a new tab)</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="project-card" aria-labelledby="project-markdown">
+      <h2 id="project-markdown">Markdown to HTML Parser</h2>
+      <p>
+        <strong class="tech-label">Technologies:</strong> Python, CLI.
+      </p>
+      <p>
+        A Python command-line tool that converts core Markdown syntax (headings,
+        lists, bold and emphasis, paragraphs) into valid HTML, built from scratch
+        without any Markdown library, with argument validation, error handling,
+        and PEP 8 style.
+      </p>
+      <ul class="link-list">
+        <li>
+          <a
+            href="https://github.com/bassem-krayem/holbertonschool-Markdown2HTML"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source Code on GitHub<span class="sr-only"> (opens in a new tab)</span>
           </a>
         </li>
       </ul>
@@ -70,7 +93,7 @@
     <section class="project-card" aria-labelledby="project-portfolio">
       <h2 id="project-portfolio">My Personal Platform</h2>
       <p>
-        <strong>Technologies:</strong> Node.js, Express, EJS, heroku, Git &
+        <strong class="tech-label">Technologies:</strong> Node.js, Express, EJS, Heroku, Git &amp;
         GitHub.
       </p>
       <p>
@@ -78,14 +101,50 @@
         rendered application to tell my personal journey as a developer, track
         my certifications, and showcase my specialties.
       </p>
-      <ul>
+      <ul class="link-list">
         <li>
           <a
             href="https://github.com/bassem-krayem/bassem-krayem-website"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-            Source Code on GitHub
+            Source Code on GitHub<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="project-card" aria-labelledby="project-geosound">
+      <h2 id="project-geosound">Geosound (AI experiment)</h2>
+      <p>
+        <strong class="tech-label">Technologies:</strong> Node.js, Express, MongoDB, Mongoose,
+        RESTful APIs.
+      </p>
+      <p>
+        A platform where blind pupils can study geography in an accessible and
+        engaging way. It was created for a student as part of her graduation
+        project in the field of education.
+      </p>
+      <p class="note">
+        <b>Honest note:</b> I built Geosound almost entirely with GitHub Copilot,
+        as an experiment to test "vibe coding" and see whether AI can really
+        produce something production-ready. Most of the code was written by AI,
+        not by me, so I share it here as an experiment and not as an example of
+        my own engineering work.
+      </p>
+      <ul class="link-list">
+        <li>
+          <a
+            href="https://github.com/bassem-krayem/geosound"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source Code on GitHub<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://geosound.ddns.net" target="_blank" rel="noopener noreferrer">
+            View Deployed Version (Note: Live status depends on project usage)<span class="sr-only"> (opens in a new tab)</span>
           </a>
         </li>
       </ul>
