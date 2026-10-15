@@ -7,7 +7,18 @@ const SITE_URL = "https://bassem-krayem.dev";
 const RESUME_FILE = "Bassem-Krayem-Junior-Backend-Software-Engineer-CV.pdf";
 
 app.disable("x-powered-by");
+// Heroku terminates HTTPS at its router, so trust its X-Forwarded-Proto header
+app.set("trust proxy", true);
 app.set("view engine", "ejs");
+
+// One address only: send www and plain http to https://bassem-krayem.dev
+// (301 = permanent, so Google merges the duplicates). Local dev is untouched.
+app.use((req, res, next) => {
+  const host = (req.headers.host || "").toLowerCase();
+  if (!host.endsWith("bassem-krayem.dev")) return next();
+  if (host === "bassem-krayem.dev" && req.protocol === "https") return next();
+  res.redirect(301, SITE_URL + req.originalUrl);
+});
 app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, "public"), { maxAge: "1d" }));
